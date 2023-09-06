@@ -1,0 +1,38 @@
+div.container {
+    display: grid;
+    grid-template-areas: 
+        "info weather horoscope events"
+        "calendar calendar calendar calendar";
+    gap: 1rem 1rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+div.info {
+    grid-area: info;
+    background-color: blue;
+    min-height: 20rem;
+}
+
+div.weather {
+    grid-area: weather;
+    background-color: red;
+}
+
+div.horoscope {
+    grid-area: horoscope;
+    background-color: black;
+}
+
+div.events {
+    grid-area: events;
+    background-color: chocolate;
+}
+
+div.calendar {
+    grid-area: calendar;
+    background-color: brown;
+    min-height: 20rem;
+}
