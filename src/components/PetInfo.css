@@ -1,4 +1,5 @@
 div.petinfo {
+    grid-area: info;
     position: relative;
     width: 100%;
     height: 100%;
