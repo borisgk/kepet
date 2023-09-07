@@ -1,21 +1,23 @@
-import React from "react"
+import React, { useState } from "react"
 import "./Landing.css"
-<<<<<<< HEAD
 import Horoscope from "./Horoscope"
-=======
 import PetInfo from "./PetInfo"
->>>>>>> ec4b7cdf2ff3d924077f1596ddf51fc073cae5f5
+import WeatherApp from "./WeatherApp/WeatherApp"
+import Calendar from "./Calendar"
+import Events from "./Events"
+import dog from "../petdata.json"
 
 export default function Landing() {
 
+    let [myDog, setMyDog] = useState(dog)
 
     return(
         <div className="container">
-            <PetInfo />
-            <div className="weather">Weather</div>
-            <Horoscope />
-            <div className="events">Events</div>
-            <div className="calendar">Calendar</div>
+            <PetInfo dog={myDog} />
+            <WeatherApp dog={myDog} />
+            <Horoscope dog={myDog} />
+            <Events dog={myDog} />
+            <Calendar dog={myDog} />
         </div>
     )
 }

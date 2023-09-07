@@ -35,7 +35,7 @@ function WeatherApp() {
 
           humidity[0].innerHTML = data.main.humidity+" %";
           wind[0].innerHTML = Math.floor(data.wind.speed)+" km/h";
-          temperature[0].innerHTML = Math.floor(data.main.temp)+"°C";
+          temperature[0].innerHTML = Math.floor(data.main.temp)+"ï¿½C";
           location[0].innerHTML = data.name;
 
           if (data.weather[0].icon==="01d" || data.weather[0].icon==="01n")
@@ -75,7 +75,7 @@ function WeatherApp() {
 }
 
   return (
-    <div className='container'>
+    <div className='weather-container weather card'>
          <div className='top-bar'>
            <input type="text" className="cityInput" placeholder='Search' />
            <div className="search-icon" onClick={()=>{search()}}>
@@ -85,7 +85,7 @@ function WeatherApp() {
         <div className="weather-image">
              <img src={wicon} alt="" />
        </div>
-       <div className="weather-temp">34°C</div>
+       <div className="weather-temp">34 &deg;C</div>
        <div className="weather-location">Nesher</div>
        <div className="data-container">
          <div className="element">
