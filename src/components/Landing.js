@@ -11,9 +11,9 @@ export default function Landing() {
 
     return(
         <div className="container">
-            <div className="info"><PetInfo /></div>
+            <PetInfo />
             <div className="weather">Weather</div>
-            <Horoscope/>
+            <Horoscope />
             <div className="events">Events</div>
             <div className="calendar">Calendar</div>
         </div>
