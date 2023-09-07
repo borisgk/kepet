@@ -12,8 +12,6 @@ div.container {
 
 div.info {
     grid-area: info;
-    background-color: blue;
-    min-height: 20rem;
 }
 
 div.weather {
