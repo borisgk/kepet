@@ -22,7 +22,6 @@ div.weather {
 div.horoscope {
     grid-area: horoscope;
     background-color: black;
-    color: white;
 }
 
 div.events {
