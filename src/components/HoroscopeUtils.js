@@ -1,3 +1,7 @@
+import JSSoup from 'jssoup'
+
+
+
 var signs = [
     {name:'Capricorn',   m:1, d:20, order:  10, symbol:"\u2651"},
     {name:'Aquarius',    m:2, d:20, order:  11, symbol:"\u2652"},
@@ -21,18 +25,58 @@ export function getSign(month, day) {
     return signs[month]
 }
 
-export async function getHoroscope(signName) {
+export function getHoroscope(signName) {
+  return "Everiting's fine!"
+  async function getText(URL){
+    let response = await fetch(URL,)
+    let data = response.body()
+    return data
+  }
+
   var sign = signs.filter(x => x.name == signName)
 
-  var signOrder = sign.order
+  var signOrder = sign[0].order
 
-  var URL = "https://www.horoscope.com/us/horoscopes/pet/horoscope-pet-weekly.aspx?sign=" + signOrder
-  let response = await fetch(URL)
-  let data = await response.json()  
+  // var URL = "https://www.horoscope.com/us/horoscopes/pet/horoscope-pet-weekly.aspx?sign=" + signOrder
+  // var body = getText(URL)
+  // var soup = new JSSoup(body)
+  // var container = soup.find("p")
+  // console.log(container.text)
 
 
 
 
-  return data
+  //return container.text
 }
 
+export function getRandomFact(setHoroText) {
+  //return "Everiting's fine!"
+  async function getText(){
+    const url = 'https://random-dog-facts.p.rapidapi.com/';
+    const options = {
+      method: 'GET',
+      headers: {
+        'X-RapidAPI-Key': '6b4b9a7de8msh0a614fd90b9c41bp103d07jsnce1ece2cb27d',
+        'X-RapidAPI-Host': 'random-dog-facts.p.rapidapi.com'
+      }
+    };
+    let result = ""
+    try {
+      const response = await fetch(url, options);
+      result = await response.json();
+      //console.log(result);
+    } catch (error) {
+      console.error(error);
+    }
+    if (!result.fact) {
+      result = "Information is not ready yet, try later"
+    } else {
+      result = result.fact
+    }
+    setHoroText(result)
+  }
+
+
+  getText()
+
+}

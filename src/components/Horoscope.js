@@ -1,17 +1,15 @@
 import React, { useState } from 'react'
-import {getSign, getHoroscope} from './HoroscopeUtils'
+import {getSign, getHoroscope, getRandomFact} from './HoroscopeUtils'
 
 export default function Horoscope({dog}) {
-  let [horoText, setHoroText] = useState("")
   var birthDate = new Date(dog.birthDate)
 
-  const setHoroscope = (text) => {setHoroText(text)}
-
-
-
   var sign = getSign(birthDate.getMonth(), birthDate.getDate())
+  var horoscope = getHoroscope(sign.name)  
+  const [horoText, setHoroText] = useState(horoscope)
   //setHoroscope(getHoroscope(sign.name))
-  //horoText = getHoroscope(sign.name)
+  getRandomFact(setHoroText)
+
 
   return (
     <div className='horoscope card'>
