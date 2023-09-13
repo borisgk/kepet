@@ -25,6 +25,11 @@ div.horoscope {
     color: white;
 }
 
+div.reminders {
+    background-color: navy;
+    color: white;
+}
+
 div.events {
     grid-area: events;
     background-color: chocolate;

@@ -1,5 +1,6 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import {getSign, getHoroscope, getRandomFact} from './HoroscopeUtils'
+import Reminders from './Reminders'
 
 export default function Horoscope({dog}) {
   var birthDate = new Date(dog.birthDate)
@@ -8,7 +9,7 @@ export default function Horoscope({dog}) {
   var horoscope = getHoroscope(sign.name)  
   const [horoText, setHoroText] = useState(horoscope)
   //setHoroscope(getHoroscope(sign.name))
-  getRandomFact(setHoroText)
+  useEffect(()=>getRandomFact(setHoroText),[])
 
 
   return (
@@ -16,6 +17,7 @@ export default function Horoscope({dog}) {
       <h2>Horoscope</h2>
       <p>{dog.name}'s sign is {sign.symbol} {sign.name}</p>
       <p>{horoText}</p>
+      <Reminders />
     </div>
   )
 }
