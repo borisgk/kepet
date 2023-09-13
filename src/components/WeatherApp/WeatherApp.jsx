@@ -35,7 +35,7 @@ function WeatherApp() {
 
           humidity[0].innerHTML = data.main.humidity+" %";
           wind[0].innerHTML = Math.floor(data.wind.speed)+" km/h";
-          temperature[0].innerHTML = Math.floor(data.main.temp)+"�C";
+          temperature[0].innerHTML = Math.floor(data.main.temp)+" &deg;C";
           location[0].innerHTML = data.name;
 
           if (data.weather[0].icon==="01d" || data.weather[0].icon==="01n")
@@ -83,7 +83,7 @@ function WeatherApp() {
            </div>
         </div>
         <div className="weather-image">
-             <img src={wicon} alt="" />
+             <img className="weather-image" src={wicon} alt="" />
        </div>
        <div className="weather-temp">34 &deg;C</div>
        <div className="weather-location">Nesher</div>
