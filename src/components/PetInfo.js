@@ -5,17 +5,13 @@ import PetName from "./PetName"
 import PetData from "./PetData"
 import FAB from "./FAB"
 
-import pet from "../petdata.json"
-
-export default function PetInfo() {
-
-    let [myPet, setMyPet] = useState(pet)
+export default function PetInfo({dog}) {
 
     return(
         <div className="petinfo">
-            <PetImage pet={myPet} />
-            <PetName pet={myPet} />
-            <PetData pet={myPet} />
+            <PetImage pet={dog} />
+            <PetName pet={dog} />
+            <PetData pet={dog} />
             <FAB />
         </div>
     )
