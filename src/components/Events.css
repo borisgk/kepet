@@ -1,0 +1,39 @@
+div.card-heading {
+    background-color: pink;
+    border-radius: 0.3rem 0.3rem 0 0;
+    height: 1.5rem;
+    line-height: 1.5rem;
+}
+
+div.card-subheading {
+    background-color: yellowgreen;
+}
+
+.events-table {
+    width: 100%;
+    border: none;
+    text-align: left;
+    font-size: 0.75rem;
+}
+
+.event-row {
+    cursor: pointer;
+}
+
+.ev-date {
+    width: 20%;
+}
+
+.ev-time {
+    width: 20%;
+    text-align: center;
+}
+
+.ev-category {
+    width: 40%;
+}
+
+.ev-duration {
+    width: 20%;
+    text-align: center;
+}
