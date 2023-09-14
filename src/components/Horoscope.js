@@ -17,7 +17,6 @@ export default function Horoscope({dog}) {
       <h2>Horoscope</h2>
       <p>{dog.name}'s sign is {sign.symbol} {sign.name}</p>
       <p>{horoText}</p>
-      <Reminders />
     </div>
   )
 }
