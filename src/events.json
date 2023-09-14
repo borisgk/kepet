@@ -22,5 +22,12 @@
         "location": "Home",
         "duration": "20",
         "comment": "Looks nice."
-    }
-]
+    },
+    {
+        "date": "2023-09-13",
+        "time": "11:00",
+        "category": "Nails",
+        "location": "Home",
+        "duration": "20",
+        "comment": "Looks nice."
+    }]
