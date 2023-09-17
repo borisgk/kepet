@@ -3,6 +3,7 @@ div.card-heading {
     border-radius: 0.3rem 0.3rem 0 0;
     height: 1.5rem;
     line-height: 1.5rem;
+    ;
 }
 
 div.card-subheading {
@@ -36,4 +37,8 @@ div.card-subheading {
 .ev-duration {
     width: 20%;
     text-align: center;
+}
+
+div.eventform {
+    background-color: #000080;
 }

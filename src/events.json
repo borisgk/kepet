@@ -1,5 +1,6 @@
 [
     {
+        "id": 0,
         "date": "2023-09-11",
         "time": "09:00",
         "category": "Vet visit",
@@ -8,6 +9,7 @@
         "comment": "Got valuable recommendations"
     },
     {
+        "id": 1,
         "date": "2023-09-10",
         "time": "17:00",
         "category": "Walk",
@@ -16,6 +18,7 @@
         "comment": "A good walk around the town. Made poo."
     },
     {
+        "id": 2,
         "date": "2023-09-01",
         "time": "11:00",
         "category": "Nails",
