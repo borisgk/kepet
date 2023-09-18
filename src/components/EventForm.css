@@ -1,0 +1,27 @@
+.event-form {
+    text-align: left;
+    padding-left: 1rem;
+    padding-top: 1rem;
+    background-color: #000080;
+}
+
+input {
+    width: 90%;
+    margin-bottom: 0.5rem;
+}
+
+label {
+    margin-top: 1rem;
+    color: white;
+}
+
+button {
+    margin-top: 1rem;
+    margin-left: 1rem;
+    margin-bottom: 1rem;
+
+}
+
+textarea {
+    width: 90%;
+}

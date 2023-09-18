@@ -1,7 +1,7 @@
 import React from "react"
 
-export default function FAB() {
+export default function FAB({handleClick}) {
     return(
-        <button className="fab">+</button>
+        <button className="fab" onClick={event => handleClick()}>+</button>
     )
 }
