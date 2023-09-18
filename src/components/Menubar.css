@@ -1,4 +1,24 @@
 div.menubar {
     height: 3rem;
     background-color: white;
+    border: 1px solid grey;
+    box-shadow: 5px 5px 5px grey;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    margin-top: 0.25rem;
+    border-radius: 0.3rem;
+    text-align: left;
+}
+
+ul {
+    margin: 0rem;
+    padding: 0rem;
+    line-height: 3rem;
+}
+
+li {
+    display: inline;
+    text-decoration: none;
+    list-style: none;
+    margin-left: 1rem;
 }

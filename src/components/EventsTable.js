@@ -8,20 +8,22 @@ function printDate(dateString) {
     return formattedDate
 }
 
-export default function EventsTable({events, title}) {
+export default function EventsTable({events, title, editFunc}) {
   return (
     <div className='events-section'>
                     <div className='card-subheading'>{title}</div>
                     <div>
                         <table className='events-table'>
-                            {events.map((e) =>
-                                <tr className='event-row'>
+                            {events.length > 0 ? events.map((e) =>
+                                <tr className='event-row' onClick={() => editFunc(e)}>
                                     <td className='ev-date'>{printDate(e.date)}</td>
                                     <td className='ev-time'>{e.time}</td>
                                     <td className='ev-category'>{e.category}</td>
                                     <td className='ev-duration'>{e.duration}</td>
                                 </tr>
-                            )}
+                            ) : <tr className='event-row'>
+                                    <td className='ev-empty'>&nbsp;</td>
+                                </tr>}
                         </table>
                     </div>
                 </div>
