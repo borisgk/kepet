@@ -24,7 +24,7 @@ div.container {
             "calendar";    
     }
     div.calendar {
-        display: none;
+        display:block;
     }
 }
 
