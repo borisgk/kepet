@@ -1,0 +1,7 @@
+.card-content{
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  overflow: auto;   scrollbar-width: none;
+
+}
