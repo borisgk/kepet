@@ -10,7 +10,6 @@ import Reminders from './components/Reminders';
 function App() {
   
   const [cardOrder, setCardOrder] = useState("dog")
-  const [windowSize, setWindowSize] = useState(getWindowSize())
   const [isMobile, setIsMobile] = useState(false)
   
   useEffect(() => {
@@ -21,8 +20,9 @@ function App() {
       } else {
         setIsMobile(false)
       }
-      setWindowSize(size);
     }
+
+    handleWindowResize()                                                            
 
     window.addEventListener('resize', handleWindowResize);
 

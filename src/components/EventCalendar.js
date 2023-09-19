@@ -58,7 +58,6 @@ export default function EventCalendar(props) {
           startAccessor="start"
           endAccessor="end"
           events={ eventList }
-
           />
       </div>
     )
