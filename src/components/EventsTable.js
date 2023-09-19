@@ -13,7 +13,7 @@ export default function EventsTable({events, title, editFunc}) {
     <div className='events-section'>
                     <div className='card-subheading'>{title}</div>
                     <div>
-                        <table className='events-table'>
+                        <table className='events-table' border={0} cellPadding={0} cellSpacing={0}>
                             {events.length > 0 ? events.map((e) =>
                                 <tr className='event-row' onClick={() => editFunc(e)}>
                                     <td className='ev-date'>{printDate(e.date)}</td>

@@ -16,7 +16,6 @@ export default function PetInfo({dog}) {
             <PetImage pet={dog} />
             <PetName pet={dog} />
             <PetData pet={dog} />
-            <FAB handleClick={handleClick}/>
         </div>
     )
 }

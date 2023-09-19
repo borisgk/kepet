@@ -1,24 +1,21 @@
-div.card-heading {
-    background-color: pink;
-    border-radius: 0.3rem 0.3rem 0 0;
-    height: 1.5rem;
-    line-height: 1.5rem;
-    ;
-}
 
 div.card-subheading {
-    background-color: yellowgreen;
+    background-color: #AEC3AE;
+    border-radius: 0.3rem;
 }
 
 .events-table {
     width: 100%;
-    border: none;
     text-align: left;
     font-size: 0.75rem;
+    border-radius: 0.3rem;
+    overflow: hidden;
 }
 
 .event-row {
     cursor: pointer;
+    background-color: #E4E4D0;
+    line-height: 1rem;
 }
 
 .ev-date {
@@ -40,5 +37,9 @@ div.card-subheading {
 }
 
 div.eventform {
-    background-color: #000080;
+    background-color: #FFEEF4;
+}
+
+td {
+    line-height: 1.5rem;
 }
