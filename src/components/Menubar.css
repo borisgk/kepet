@@ -21,4 +21,5 @@ li {
     text-decoration: none;
     list-style: none;
     margin-left: 1rem;
+    cursor: pointer;
 }
