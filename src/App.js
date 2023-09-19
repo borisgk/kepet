@@ -12,7 +12,7 @@ function App() {
   
   const [cardOrder, setCardOrder] = useState("dog")
   const [isMobile, setIsMobile] = useState(false)
-
+  
   useEffect(() => {
     function handleWindowResize() {
       let size = getWindowSize()
@@ -42,12 +42,8 @@ function App() {
 
   return (
     <div className="App">
-
       <Menubar changeOrder={changeOrder} />
-      <Reminders />
-      <Landing order={cardOrder} isMobile={isMobile} />
-      <Footer />
-
+     <Landing order={cardOrder} isMobile={isMobile} />
     </div>
   );
 }
