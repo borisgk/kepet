@@ -23,6 +23,8 @@ function App() {
       }
     }
 
+    handleWindowResize()                                                            
+
     window.addEventListener('resize', handleWindowResize);
 
     return () => {
