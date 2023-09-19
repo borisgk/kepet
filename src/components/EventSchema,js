@@ -1,0 +1,28 @@
+import mongoose from "mongoose";
+
+const EventSchema = new mongoose.Schema({
+    date: {
+        type: Date,
+        required : true
+    },
+    category:{
+        type: String,
+        required: true,
+    },
+    location:{
+        type: String,
+        required: true,
+    },
+    duration: String,
+    comment:{
+        type: String,
+        required: false,
+    },
+
+}, {
+    timestamps: true  //add createdAt and updatedAt fields to the schema
+}
+
+)
+
+export default mongoose.model("Event", EventSchema)
