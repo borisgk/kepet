@@ -144,7 +144,7 @@ export default function Events() {
         !showForm ?
         
         <div className='events card'>
-            <div className='card-heading'>Events</div>
+            
                 <EventsTable events={eventsFuture} title="Future" editFunc={editEvent} />
                 <EventsTable events={eventsTomorrow} title="Tomorrow" editFunc={editEvent} />
                 <EventsTable events={eventsToday} title="Today" editFunc={editEvent} />

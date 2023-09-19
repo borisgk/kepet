@@ -6,7 +6,7 @@ div.petinfo {
     border: none;
     border-radius: 0.3rem;
     box-shadow: 5px 5px 5px grey;
-    background-color: #EEEEEE;
+    background-color: #FFEEF4;
 }
 
 div.petimage {
@@ -36,6 +36,7 @@ button.fab {
     box-shadow: 5px 5px 5px grey;
     font-size: 2rem;
     color: white;
+    margin: 0;
 
 }
 
