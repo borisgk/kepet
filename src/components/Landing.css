@@ -25,6 +25,7 @@ div.container {
     }
     div.calendar {
         display:block;
+        overflow: hidden;
     }
 }
 
