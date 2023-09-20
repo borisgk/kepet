@@ -1,0 +1,36 @@
+[
+    {
+        "id": 0,
+        "date": "2023-09-11",
+        "time": "09:00",
+        "category": "Vet visit",
+        "location": "SuperDog Clinic",
+        "duration": "30",
+        "comment": "Got valuable recommendations"
+    },
+    {
+        "id": 1,
+        "date": "2023-09-10",
+        "time": "17:00",
+        "category": "Walk",
+        "location": "Maccabim street",
+        "duration": "40",
+        "comment": "A good walk around the town. Made poo."
+    },
+    {
+        "id": 2,
+        "date": "2023-09-01",
+        "time": "11:00",
+        "category": "Nails",
+        "location": "Home",
+        "duration": "20",
+        "comment": "Looks nice."
+    },
+    {
+        "date": "2023-09-13",
+        "time": "11:00",
+        "category": "Nails",
+        "location": "Home",
+        "duration": "20",
+        "comment": "Looks nice."
+    }]
