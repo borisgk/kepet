@@ -47,7 +47,6 @@ export default function EventCalendar(props) {
     // }
     let theEvents = readEvents()
     var eventList = theEvents==undefined ? events.map(e => newEvent(e)) : theEvents.map(e => newEvent(e))
-    console.log(eventList)
 
     //const DnDCalendar = withDragAndDrop(Calendar);
 

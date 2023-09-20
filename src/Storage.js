@@ -1,6 +1,5 @@
 function writeEvents(events) {
     localStorage.setItem('events', JSON.stringify(events))
-    console.log("Saved.")
 }
 
 function readEvents() {

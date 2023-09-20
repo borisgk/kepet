@@ -52,7 +52,6 @@ function WeatherApp({dog}) {
     let data = await response.json();
     setCurrentWeather(data)
     setWeatherIcon(data.weather[0].icon)
-    console.log(data)
   }
 
   function setWeatherIcon(code) {
