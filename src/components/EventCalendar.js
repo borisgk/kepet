@@ -52,7 +52,8 @@ export default function EventCalendar(props) {
     //const DnDCalendar = withDragAndDrop(Calendar);
 
     return (
-      <div className='calendar'>
+      <div className='calendar card'>
+          <div className='card-heading'>Calendar</div>
           <Calendar
           localizer={localizer}
           startAccessor="start"

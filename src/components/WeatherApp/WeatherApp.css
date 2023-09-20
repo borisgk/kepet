@@ -11,7 +11,8 @@
 .top-bar input{
   display: flex;
   height: 2rem;
-  margin-right: 2rem;
+  margin: auto;
+  margin-top: 3rem;
   background-color: #ebfffc;
   border: none;
   outline: none;
@@ -20,7 +21,7 @@
   color: #626262;
   font-size: 1rem;
   font-weight: 400;
-  width: 30%;
+  width: 90%;
 }
 
 .search-icon{

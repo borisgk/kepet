@@ -5,6 +5,6 @@
     "color": "golden",
     "number": "019347-343",
     "weight": "4.5",
-    "image": "dog.webp",
-    "city": "Haifa"
+    "image": ["001.jpg", "002.jpg", "003.jpg", "004.jpg", "005.jpg"],
+    "city": "Givat Zeev"
 }

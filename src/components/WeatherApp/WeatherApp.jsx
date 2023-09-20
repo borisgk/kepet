@@ -16,12 +16,82 @@ function WeatherApp({dog}) {
     init(dog.city)
   }, [])
 
-  function init(city) {
-    
+  let api_key="797c3625c753a611bf59cdbf0bbe78b8";
+
+  let [searchInput, setSearchInput] = useState("")
+
+  function handleChange(event) {
+    setSearchInput(event.target.value)
   }
 
-   let api_key="797c3625c753a611bf59cdbf0bbe78b8";
- 
+  function handleKeyDown (event) {
+    if (event.key === 'Enter')
+    {
+      search()
+    }
+  }
+
+  let [currentWeather, setCurrentWeather] = useState({
+      "main": {
+        "temp": 0,
+        "humidity": 0,
+      },
+      "wind": {
+        "speed": 0
+      },
+      "weather": [
+        {
+          "icon": "01d"
+        }
+      ]
+  })
+
+  async function init(city) {
+    let url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${api_key}`    
+    let response = await fetch(url);
+    let data = await response.json();
+    setCurrentWeather(data)
+    setWeatherIcon(data.weather[0].icon)
+    console.log(data)
+  }
+
+  function setWeatherIcon(code) {
+    if (code==="01d" || code==="01n")
+    {
+      setWicon(clear_icon);
+    }
+    else if (code==="02d" || code==="02n")
+    {
+      setWicon(cloud_icon);
+    }
+    else if (code==="03d" || code==="03n")
+    {
+      setWicon(drizzle_icon);
+    }
+    else if (code==="04d" || code==="04n")
+    {
+      setWicon(drizzle_icon);
+    }
+    else if (code==="09d" || code==="09n")
+    {
+      setWicon(rain_icon);
+    }
+    else if (code==="10d" || code==="10n")
+    {
+      setWicon(rain_icon);
+    }
+    else if (code==="13d" || code==="13n")
+    {
+      setWicon(snow_icon);
+    }
+    else 
+    {
+      setWicon(clear_icon);
+    }
+
+  }
+
+   
    const [wicon, setWicon] = useState (cloud_icon);
 
    const search = async () => {
@@ -46,39 +116,7 @@ function WeatherApp({dog}) {
           temperature[0].innerHTML = Math.floor(data.main.temp)+" &deg;C";
           location[0].innerHTML = data.name;
 
-          if (data.weather[0].icon==="01d" || data.weather[0].icon==="01n")
-          {
-            setWicon(clear_icon);
-          }
-          else if (data.weather[0].icon==="02d" || data.weather[0].icon==="02n")
-          {
-            setWicon(cloud_icon);
-          }
-          else if (data.weather[0].icon==="03d" || data.weather[0].icon==="03n")
-          {
-            setWicon(drizzle_icon);
-          }
-          else if (data.weather[0].icon==="04d" || data.weather[0].icon==="04n")
-          {
-            setWicon(drizzle_icon);
-          }
-          else if (data.weather[0].icon==="09d" || data.weather[0].icon==="09n")
-          {
-            setWicon(rain_icon);
-          }
-          else if (data.weather[0].icon==="10d" || data.weather[0].icon==="10n")
-          {
-            setWicon(rain_icon);
-          }
-          else if (data.weather[0].icon==="13d" || data.weather[0].icon==="13n")
-          {
-            setWicon(snow_icon);
-          }
-          else 
-          {
-            setWicon(clear_icon);
-          }
-
+          setWeatherIcon(data.weather[0].icon)
 
 }
 
@@ -89,29 +127,26 @@ function WeatherApp({dog}) {
         <div className="weather-image">
              <img className="weather-image" src={wicon} alt="" />
        </div>
-       <div className="weather-temp">34 &deg;C</div>
-       <div className="weather-location">Nesher</div>
+       <div className="weather-temp">{Math.floor(currentWeather.main.temp * 10) / 10}&nbsp;&deg;C</div>
+       <div className="weather-location">{dog.city}</div>
        <div className="data-container">
          <div className="element">
              <img src={humidity_icon} alt="" className="icon" />
              <div className="data">
-                 <div className="humidity-percent">64%</div>
+                 <div className="humidity-percent">{currentWeather.main.humidity}&nbsp;%</div>
                  <div className="text">Humidity</div>
             </div>
          </div>
          <div className="element">
              <img src={wind_icon} alt="" className="icon" />
              <div className="data">
-                 <div className="wind-rate">8 km/h</div>
+                 <div className="wind-rate">{currentWeather.wind.speed} km/h</div>
                  <div className="text">Wind Speed</div>
             </div>
          </div>
 
          <div className='top-bar'>
-           <input type="text" className="cityInput" placeholder='Search' />
-           <div className="search-icon" onClick={()=>{search()}}>
-             <img src={search_icon} alt="" />
-           </div>
+           <input type="text" className="cityInput" placeholder='Search' onChange={handleChange} onKeyDown={handleKeyDown}/>
         </div>
 
       </div>

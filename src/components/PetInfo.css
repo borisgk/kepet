@@ -12,7 +12,7 @@ div.petinfo {
 
 div.petimage {
     width: 100%;
-    height: 8rem;
+    height: 16rem;
     border-radius: 0.3rem 0.3rem 0 0;
     box-sizing: border-box;
     background-size: cover;
