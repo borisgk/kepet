@@ -130,14 +130,14 @@ function WeatherApp({dog}) {
        <div className="weather-location">{dog.city}</div>
        <div className="data-container">
          <div className="element">
-             <img src={humidity_icon} alt="" className="icon" />
+         <div class="material-symbols-outlined icon">water_drop</div>
              <div className="data">
                  <div className="humidity-percent">{currentWeather.main.humidity}&nbsp;%</div>
                  <div className="text">Humidity</div>
             </div>
          </div>
          <div className="element">
-             <img src={wind_icon} alt="" className="icon" />
+         <div class="material-symbols-outlined icon">air</div>
              <div className="data">
                  <div className="wind-rate">{currentWeather.wind.speed} km/h</div>
                  <div className="text">Wind Speed</div>
