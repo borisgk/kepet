@@ -11,8 +11,10 @@ input {
 }
 
 label {
-    margin-top: 1rem;
-    color: white;
+    margin-top: 0.5rem;
+    color: black;
+    font-size: 0.75rem;
+    display: block;
 }
 
 button {

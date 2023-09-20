@@ -92,7 +92,7 @@ export default function Events() {
     }, [currentEvents])
 
     function displayForm() {
-        let newEvent = {date: today.toISOString().split('T')[0], time: "09:00"}
+        let newEvent = {date: tomorrow.toISOString().split('T')[0], time: "09:00"}
         console.log(newEvent)
         setSelectedEvent(newEvent)
         setShowForm(true)
@@ -144,7 +144,7 @@ export default function Events() {
         !showForm ?
         
         <div className='events card'>
-            
+                <div className='card-heading'>Events</div>
                 <EventsTable events={eventsFuture} title="Future" editFunc={editEvent} />
                 <EventsTable events={eventsTomorrow} title="Tomorrow" editFunc={editEvent} />
                 <EventsTable events={eventsToday} title="Today" editFunc={editEvent} />

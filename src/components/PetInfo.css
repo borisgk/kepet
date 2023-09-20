@@ -7,6 +7,7 @@ div.petinfo {
     border-radius: 0.3rem;
     box-shadow: 5px 5px 5px grey;
     background-color: #FFEEF4;
+    line-height: 2rem;
 }
 
 div.petimage {
@@ -22,6 +23,7 @@ div.petname {
     font-size: 2rem;
     text-align: left;
     margin-left: 0.5rem;
+    margin-top: 1rem;
 }
 
 button.fab {

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import './WeatherApp.css'
 
 import search_icon from '../Assets/search.png';
@@ -10,7 +10,15 @@ import snow_icon from '../Assets/snow.png';
 import wind_icon from '../Assets/wind.png';
 import humidity_icon from '../Assets/humidity.png';
 
-function WeatherApp() {
+function WeatherApp({dog}) {
+
+  useEffect(() => {
+    init(dog.city)
+  }, [])
+
+  function init(city) {
+    
+  }
 
    let api_key="797c3625c753a611bf59cdbf0bbe78b8";
  
@@ -76,12 +84,8 @@ function WeatherApp() {
 
   return (
     <div className='weather-container weather card'>
-         <div className='top-bar'>
-           <input type="text" className="cityInput" placeholder='Search' />
-           <div className="search-icon" onClick={()=>{search()}}>
-             <img src={search_icon} alt="" />
-           </div>
-        </div>
+        <div className='card-heading'>Weather</div>
+         
         <div className="weather-image">
              <img className="weather-image" src={wicon} alt="" />
        </div>
@@ -102,6 +106,14 @@ function WeatherApp() {
                  <div className="text">Wind Speed</div>
             </div>
          </div>
+
+         <div className='top-bar'>
+           <input type="text" className="cityInput" placeholder='Search' />
+           <div className="search-icon" onClick={()=>{search()}}>
+             <img src={search_icon} alt="" />
+           </div>
+        </div>
+
       </div>
     </div>
 

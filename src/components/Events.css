@@ -1,8 +1,8 @@
 
 div.card-subheading {
-    background-color: #AEC3AE;
-    border-radius: 0.3rem;
+    background-color: #E4E4D0;
 }
+
 
 .events-table {
     width: 100%;
@@ -14,12 +14,13 @@ div.card-subheading {
 
 .event-row {
     cursor: pointer;
-    background-color: #E4E4D0;
+    background-color: #FFEEF4;
     line-height: 1rem;
 }
 
 .ev-date {
     width: 20%;
+    padding-left: 0.25rem;
 }
 
 .ev-time {

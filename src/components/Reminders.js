@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import reminders from '../TipsAndReminders.json'
+import "./Horoscope.css"
 
 export default function Reminders(props) {
     const [regularTip, setRegularTip] = useState("")
@@ -28,17 +29,17 @@ export default function Reminders(props) {
 
   return (
     <div className='reminders'>
-        <h3>Tips and Reminders</h3><br/>
+        <div className='card-heading'>Tips and Reminders</div>
         {showRegular? 
-          <p>{regularTip}</p>
+          <div className='tip'>{regularTip}</div>
           :""
         }
         {showSeasonal? 
-          <p>{seasonalReminder}</p>
+          <div className='tip'>{seasonalReminder}</div>
           :""
         }
         {showGeneral? 
-          <p>{generalTip}</p>
+          <div className='tip'>{generalTip}</div>
           :""
         }
       

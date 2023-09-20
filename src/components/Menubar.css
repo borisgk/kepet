@@ -1,7 +1,7 @@
 div.menubar {
     height: 3rem;
-    background-color: white;
-    border: 1px solid grey;
+    background-color: #FFEEF4;
+    border: 1px solid lightgrey;
     box-shadow: 5px 5px 5px grey;
     margin-left: 1rem;
     margin-right: 1rem;

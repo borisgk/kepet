@@ -17,27 +17,27 @@ export default function EventForm({cancelForm, submitForm, evnt, deleteEvent}) {
     <div>
         <form className='event-form'>
             <div>
-                <label for="date">Date:</label>
+                <label for="date">Date</label>
                 <input type='date' name='date' onChange={(event) => setMyDate(event.target.value)} defaultValue={myDate}></input>
             </div>
             <div>
-                <label for="time">Time:</label>
+                <label for="time">Time</label>
                 <input type='time' name='time' onChange={(event) => setMyTime(event.target.value)} defaultValue={myTime}></input>
             </div>
             <div>
-                <label for="category">Category:</label>
+                <label for="category">Category</label>
                 <input type='text' name='category' onChange={(event) => setMyCategory(event.target.value)} defaultValue={myCategory}></input>
             </div>
             <div>
-                <label for="location">Location:</label>
+                <label for="location">Location</label>
                 <input type='text' name='location' onChange={(event) => setMyLocation(event.target.value)} defaultValue={myLocation}></input>
             </div>
             <div>
-                <label for="duration">Duration:</label>
+                <label for="duration">Duration</label>
                 <input type='text' name='duration' onChange={(event) => setMyDuration(event.target.value)} defaultValue={myDuration}></input>
             </div>
             <div>
-                <label for="comment">Comment:</label>
+                <label for="comment">Comment</label>
                 <textarea name='comment' rows={5} onChange={(event) => setMyComment(event.target.value)} defaultValue={myComment}></textarea>
             </div>
             <button onClick={(event) => {
